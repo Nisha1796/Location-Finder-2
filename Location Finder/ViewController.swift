@@ -62,6 +62,8 @@ class ViewController: UIViewController, UISearchBarDelegate, CLLocationManagerDe
                        let annotation = MKPointAnnotation()
                        annotation.coordinate = CLLocationCoordinate2DMake(latitude!, longitude!)
                        self.mapView.addAnnotation(annotation)
+                       annotation.title = "Your Destination"
+                       
                    }
     }
                 }

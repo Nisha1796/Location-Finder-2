@@ -44,7 +44,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Location Finder" id="F0c-hT-KxL">
+                    <navigationItem key="navigationItem" title="Location Finder" id="F0c-hT-KxL" colorLabel="IBBuiltInLabel-Red">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="heart.fill" catalog="system" id="Q4J-XJ-EPV">
                             <color key="tintColor" red="0.56290119890000001" green="0.0" blue="0.36864241959999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
