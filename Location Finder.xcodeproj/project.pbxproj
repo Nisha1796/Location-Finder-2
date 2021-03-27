@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C7917F17260FA8E7004E92C3 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7917F16260FA8E7004E92C3 /* TableViewController.swift */; };
 		C7C38B8F260D44400086167F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C38B8E260D44400086167F /* AppDelegate.swift */; };
 		C7C38B91260D44400086167F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C38B90260D44400086167F /* SceneDelegate.swift */; };
 		C7C38B93260D44400086167F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C38B92260D44400086167F /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C7917F16260FA8E7004E92C3 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		C7C38B8B260D44400086167F /* Location Finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Location Finder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7C38B8E260D44400086167F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7C38B90260D44400086167F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				C7C38B97260D44410086167F /* Assets.xcassets */,
 				C7C38B99260D44410086167F /* LaunchScreen.storyboard */,
 				C7C38B9C260D44410086167F /* Info.plist */,
+				C7917F16260FA8E7004E92C3 /* TableViewController.swift */,
 			);
 			path = "Location Finder";
 			sourceTree = "<group>";
@@ -152,6 +155,7 @@
 				C7C38B93260D44400086167F /* ViewController.swift in Sources */,
 				C7C38B8F260D44400086167F /* AppDelegate.swift in Sources */,
 				C7C38B91260D44400086167F /* SceneDelegate.swift in Sources */,
+				C7917F17260FA8E7004E92C3 /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

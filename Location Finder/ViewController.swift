@@ -9,8 +9,12 @@ import UIKit
 import MapKit
 import CoreLocation
 
+
+
+
 class ViewController: UIViewController, UISearchBarDelegate, CLLocationManagerDelegate, MKMapViewDelegate {
-    
+
+   
   
     @IBOutlet weak var address: UITextField!
     @IBOutlet weak var mapView: MKMapView!
@@ -19,6 +23,7 @@ class ViewController: UIViewController, UISearchBarDelegate, CLLocationManagerDe
         
         //call a method
         getAddress()
+        
         
         //Indicate the running activity *
         let activityIndicator = UIActivityIndicatorView()
@@ -56,6 +61,16 @@ class ViewController: UIViewController, UISearchBarDelegate, CLLocationManagerDe
                        
                    }
     }
+        
+        
+        
+        if (address.text != nil) {
+          
+            array.append(address.text!)
+        }
+        ViewController.load()
+        reloadInputViews()
+        
                 }
     
     
