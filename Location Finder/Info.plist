@@ -64,5 +64,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Please allow microphone to enjoy Features</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>Please allow speech recoginitation to enjoy features</string>
 </dict>
 </plist>

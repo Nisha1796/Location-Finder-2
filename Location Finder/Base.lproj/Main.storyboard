@@ -48,6 +48,13 @@
                                     <imageReference key="image" image="mic.fill" catalog="system" symbolScale="large"/>
                                 </state>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hl5-Zy-e28">
+                                <rect key="frame" x="54" y="130" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -77,6 +84,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="address" destination="7FG-iN-bWc" id="yfQ-Je-b6u"/>
+                        <outlet property="btn_start" destination="t0O-tY-X4W" id="5oH-k8-SBn"/>
+                        <outlet property="lb_speech" destination="hl5-Zy-e28" id="vND-FQ-qSe"/>
                         <outlet property="mapView" destination="IBd-8f-XBf" id="Gp1-7k-2LM"/>
                     </connections>
                 </viewController>
