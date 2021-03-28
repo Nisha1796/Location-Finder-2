@@ -47,9 +47,12 @@
                                 <state key="normal">
                                     <imageReference key="image" image="mic.fill" catalog="system" symbolScale="large"/>
                                 </state>
+                                <connections>
+                                    <action selector="btn_start_stop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m8p-Uj-Tof"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hl5-Zy-e28">
-                                <rect key="frame" x="54" y="130" width="42" height="21"/>
+                                <rect key="frame" x="15" y="130" width="385" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
