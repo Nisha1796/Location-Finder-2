@@ -9,6 +9,11 @@ import UIKit
 import MapKit
 import CoreLocation
 import Speech
+import SQLite3
+import CoreData
+
+
+
 
 
 
@@ -26,6 +31,8 @@ class ViewController: UIViewController, UISearchBarDelegate, CLLocationManagerDe
         
         //call a method
         getAddress()
+        
+        //NSString * myDB=@"History2"
         
         
         //Indicate the running activity *
@@ -184,11 +191,11 @@ class ViewController: UIViewController, UISearchBarDelegate, CLLocationManagerDe
            if isStart {
                startSpeechRecognization()
                btn_start.setTitle("STOP", for: .normal)
-               btn_start.backgroundColor = .systemGreen
+              
            }else {
                cancelSpeechRecognization()
                btn_start.setTitle("START", for: .normal)
-               btn_start.backgroundColor = .systemOrange
+               
            }
        }
     
@@ -226,7 +233,7 @@ class ViewController: UIViewController, UISearchBarDelegate, CLLocationManagerDe
             }
             
             if !myRecognization.isAvailable {
-                self.alertView(message: "Recognization is free right now, Please try again after some time.")
+               self.alertView(message: "Recognization is free right now, Please try again after some time.")
             }
             
             task = speechReconizer?.recognitionTask(with: request, resultHandler: { (response, error) in
