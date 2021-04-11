@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Got-yF-bhd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Got-yF-bhd">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18092"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -51,13 +51,23 @@
                                     <action selector="btn_start_stop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m8p-Uj-Tof"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hl5-Zy-e28">
-                                <rect key="frame" x="15" y="130" width="385" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="csg-QE-VIf">
+                                <rect key="frame" x="20" y="771" width="374" height="32"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="PQT-hd-pJd"/>
+                                    <constraint firstAttribute="width" constant="374" id="V0T-xV-kqP"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Standard"/>
+                                    <segment title="Satellite"/>
+                                    <segment title="Hybrid"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" red="0.56290119890000001" green="0.0" blue="0.36864241959999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <action selector="mapTheme:" destination="BYZ-38-t0r" eventType="valueChanged" id="rq2-cQ-OcE"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -68,9 +78,12 @@
                             <constraint firstItem="7FG-iN-bWc" firstAttribute="trailing" secondItem="t0O-tY-X4W" secondAttribute="trailing" id="7zk-Wk-qyV"/>
                             <constraint firstItem="7FG-iN-bWc" firstAttribute="top" secondItem="t0O-tY-X4W" secondAttribute="top" id="Ebc-3e-vx8"/>
                             <constraint firstItem="MPa-dI-6wV" firstAttribute="leading" secondItem="7FG-iN-bWc" secondAttribute="trailing" constant="8" symbolic="YES" id="Esb-Wb-nqv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="csg-QE-VIf" secondAttribute="trailing" constant="20" id="Khq-xx-O3K"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="csg-QE-VIf" secondAttribute="bottom" constant="60" id="O2a-je-tR6"/>
                             <constraint firstItem="MPa-dI-6wV" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Tqx-gn-Qio"/>
                             <constraint firstItem="MPa-dI-6wV" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="WDe-DM-KNF"/>
                             <constraint firstItem="MPa-dI-6wV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="WKL-EO-wD8"/>
+                            <constraint firstItem="csg-QE-VIf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="aaS-XC-cQx"/>
                             <constraint firstItem="IBd-8f-XBf" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="fNu-8U-ClW"/>
                             <constraint firstItem="7FG-iN-bWc" firstAttribute="top" secondItem="IBd-8f-XBf" secondAttribute="top" id="fnZ-Pp-K2o"/>
                             <constraint firstItem="7FG-iN-bWc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ryS-HA-f3k"/>
@@ -88,7 +101,6 @@
                     <connections>
                         <outlet property="address" destination="7FG-iN-bWc" id="yfQ-Je-b6u"/>
                         <outlet property="btn_start" destination="t0O-tY-X4W" id="5oH-k8-SBn"/>
-                        <outlet property="lb_speech" destination="hl5-Zy-e28" id="vND-FQ-qSe"/>
                         <outlet property="mapView" destination="IBd-8f-XBf" id="Gp1-7k-2LM"/>
                     </connections>
                 </viewController>
@@ -110,7 +122,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="72" id="100-Mx-N98">
-                                        <rect key="frame" x="0.0" y="24.5" width="414" height="72"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="72"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="100-Mx-N98" id="qMG-LG-mKS">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="72"/>

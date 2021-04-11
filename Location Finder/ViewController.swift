@@ -13,11 +13,6 @@ import SQLite3
 import CoreData
 
 
-
-
-
-
-
 class ViewController: UIViewController, UISearchBarDelegate, CLLocationManagerDelegate, MKMapViewDelegate, SFSpeechRecognizerDelegate  {
 
     //initializing speech components
@@ -27,6 +22,23 @@ class ViewController: UIViewController, UISearchBarDelegate, CLLocationManagerDe
     @IBOutlet weak var address: UITextField!
     @IBOutlet weak var mapView: MKMapView!
     let userDefaults = UserDefaults.standard
+    
+    @IBAction func mapTheme(_ sender: UISegmentedControl) {
+        let index = sender.selectedSegmentIndex
+        
+        switch index {
+        case 0:
+            mapView.mapType = MKMapType.standard
+        case 1:
+            mapView.mapType = MKMapType.satellite
+        case 2:
+            mapView.mapType = MKMapType.hybrid
+        default:
+            mapView.mapType = MKMapType.standard
+            break
+        }
+        
+    }
     
     @IBAction func searchbtn(_ sender: Any) {
         
@@ -250,7 +262,7 @@ class ViewController: UIViewController, UISearchBarDelegate, CLLocationManagerDe
                 
                 let message = response.bestTranscription.formattedString
                 print("Message : \(message)")
-                self.lb_speech.text = message
+                self.address.text = message
                 
                 
             })}
@@ -268,8 +280,6 @@ class ViewController: UIViewController, UISearchBarDelegate, CLLocationManagerDe
                    audioEngine.inputNode.removeTap(onBus: 0)
                }
             
-    
-  
     
     }
     
