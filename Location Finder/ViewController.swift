@@ -26,6 +26,7 @@ class ViewController: UIViewController, UISearchBarDelegate, CLLocationManagerDe
   
     @IBOutlet weak var address: UITextField!
     @IBOutlet weak var mapView: MKMapView!
+    let userDefaults = UserDefaults.standard
     
     @IBAction func searchbtn(_ sender: Any) {
         
@@ -77,8 +78,9 @@ class ViewController: UIViewController, UISearchBarDelegate, CLLocationManagerDe
         
         
         if (address.text != nil) {
-          
-            array.append(address.text!)
+            HistoryArray = userDefaults.stringArray(forKey: "location") ?? []
+            HistoryArray.append(address.text!)
+            userDefaults.set(HistoryArray, forKey: "location")
         }
         ViewController.load()
         reloadInputViews()

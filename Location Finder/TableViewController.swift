@@ -6,8 +6,8 @@
 //
 
 import UIKit
-var array = [""]
-
+var HistoryArray: [String] = []
+let userDefaults = UserDefaults.standard
 
 class TableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -20,7 +20,8 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        HistoryArray = userDefaults.stringArray(forKey: "location") ?? []
+        userDefaults.set(HistoryArray, forKey: "location")
         
        myTableView.dataSource = self
        myTableView.delegate = self
@@ -30,7 +31,7 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
 }
 
 func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return array.count
+    return HistoryArray.count
     
 }
 
@@ -38,7 +39,7 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
     let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")
     
     
-    cell?.textLabel?.text = array[indexPath.row]
+    cell?.textLabel?.text = HistoryArray[indexPath.row]
     
   
     return cell!
@@ -48,7 +49,9 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
     //to delete a task from swiping left
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            array.remove(at: indexPath.row)
+            HistoryArray = userDefaults.stringArray(forKey: "location") ?? []
+            HistoryArray.remove(at: indexPath.row)
+            userDefaults.set(HistoryArray, forKey: "location")
             tableView.deleteRows(at: [indexPath], with: .fade)
             
         } else if editingStyle == .insert {

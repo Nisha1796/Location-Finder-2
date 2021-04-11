@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BBFA4DC8261F8733001730D5 /* History2.db in Resources */ = {isa = PBXBuildFile; fileRef = BBFA4DC7261F8733001730D5 /* History2.db */; };
+		BBFA4DCB261F88A8001730D5 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BBFA4DCA261F8766001730D5 /* libsqlite3.0.tbd */; };
+		BBFA4DCE261F8EDF001730D5 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFA4DCD261F8EDF001730D5 /* Location.swift */; };
 		C7917F17260FA8E7004E92C3 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7917F16260FA8E7004E92C3 /* TableViewController.swift */; };
 		C7C38B8F260D44400086167F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C38B8E260D44400086167F /* AppDelegate.swift */; };
 		C7C38B91260D44400086167F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C38B90260D44400086167F /* SceneDelegate.swift */; };
@@ -18,6 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BBFA4DC7261F8733001730D5 /* History2.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = History2.db; sourceTree = "<group>"; };
+		BBFA4DCA261F8766001730D5 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		BBFA4DCD261F8EDF001730D5 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		C7917F16260FA8E7004E92C3 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		C7C38B8B260D44400086167F /* Location Finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Location Finder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7C38B8E260D44400086167F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -35,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBFA4DCB261F88A8001730D5 /* libsqlite3.0.tbd in Frameworks */,
 				C7C38BA5260D57E50086167F /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -62,6 +69,8 @@
 		C7C38B8D260D44400086167F /* Location Finder */ = {
 			isa = PBXGroup;
 			children = (
+				BBFA4DC7261F8733001730D5 /* History2.db */,
+				BBFA4DCD261F8EDF001730D5 /* Location.swift */,
 				C7C38B8E260D44400086167F /* AppDelegate.swift */,
 				C7C38B90260D44400086167F /* SceneDelegate.swift */,
 				C7C38B92260D44400086167F /* ViewController.swift */,
@@ -77,6 +86,7 @@
 		C7C38BA3260D57E40086167F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BBFA4DCA261F8766001730D5 /* libsqlite3.0.tbd */,
 				C7C38BA4260D57E50086167F /* CoreLocation.framework */,
 			);
 			name = Frameworks;
@@ -142,6 +152,7 @@
 				C7C38B9B260D44410086167F /* LaunchScreen.storyboard in Resources */,
 				C7C38B98260D44410086167F /* Assets.xcassets in Resources */,
 				C7C38B96260D44400086167F /* Main.storyboard in Resources */,
+				BBFA4DC8261F8733001730D5 /* History2.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,6 +165,7 @@
 			files = (
 				C7C38B93260D44400086167F /* ViewController.swift in Sources */,
 				C7C38B8F260D44400086167F /* AppDelegate.swift in Sources */,
+				BBFA4DCE261F8EDF001730D5 /* Location.swift in Sources */,
 				C7C38B91260D44400086167F /* SceneDelegate.swift in Sources */,
 				C7917F17260FA8E7004E92C3 /* TableViewController.swift in Sources */,
 			);
@@ -303,6 +315,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z8MJMBF8B7;
 				INFOPLIST_FILE = "Location Finder/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -321,6 +334,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z8MJMBF8B7;
 				INFOPLIST_FILE = "Location Finder/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
